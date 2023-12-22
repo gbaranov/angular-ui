@@ -18,7 +18,15 @@ export class AddCategoryComponent {
   }
 
   onFormSubmit() {
-    this.categoryServic.addCategory(this.model);
+    this.categoryServic.addCategory(this.model)
+    .subscribe({
+      next: (response) => {
+        
+      },
+      error: (error) => {
+
+      }
+    })
   }
 
 }
