@@ -25,7 +25,7 @@ export class AddCategoryComponent implements OnDestroy {
     this.addCategotySubscription = this.categoryServic.addCategory(this.model)
     .subscribe({
       next: (response) => {
-        this.router.navigateByUrl('/admin');
+        this.router.navigateByUrl('/admin/categories');
       },
       error: (error) => {
 
