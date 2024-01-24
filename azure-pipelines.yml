@@ -16,7 +16,7 @@ steps:
   displayName: 'Install dependencies'
 
 - script: |
-    ng build --prod
+    ng build
   displayName: 'Build Angular app'
 
 - task: ArchiveFiles@2
