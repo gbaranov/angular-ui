@@ -37,4 +37,8 @@ export class EditCategoryComponent implements OnInit, OnDestroy{
     this.paramsSubscription?.unsubscribe();
   }
 
+  onFormSubmit(): void {
+    console.log(this.category);
+  }
+
 }

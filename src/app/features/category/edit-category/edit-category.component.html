@@ -2,35 +2,35 @@
     <h1 class="" mt-3>Edit Category</h1>
 
     <ng-container *ngIf="category;else notFound">
-
+        <form #form="ngForm" (ngSubmit)="onFormSubmit()">
+            <div class="mt-2">
+                <div class="mt-3">
+                    <label for="categoryId">Category Id</label>
+                    <input type="text" disabled id="categoryId" 
+                    class="form-control" name="CategoryId" [(ngModel)]="category.id">
+                </div>
+    
+                <div class="mt-3">
+                    <label for="categoryName">Category Name</label>
+                    <input type="text" id="categoryName" 
+                    class="form-control" name="categoryName"  [(ngModel)]="category.name">
+                </div>
+    
+                <div class="mt-3">
+                    <label for="categoryUrl">Category URL</label>
+                    <input type="text" id="categoryUrl" 
+                    clas="form-control" name="categoryUrl"  [(ngModel)]="category.urlHandle">
+                </div>
+    
+                <div class="mt-3">
+                    <button type="submit" class="btn btn-primary">Save</button>
+                </div>
+    
+            </div>
+        </form>
     </ng-container>
 
-    <form >
-        <div class="mt-2">
-            <div class="mt-3">
-                <label for="categoryId">Category Id</label>
-                <input type="text" disabled id="categoryId" 
-                class="form-control" name="CategoryId" [(ngModel)]="category.id">
-            </div>
 
-            <div class="mt-3">
-                <label for="categoryName">Category Name</label>
-                <input type="text" id="categoryName" 
-                class="form-control" name="categoryName"  [(ngModel)]="category.name">
-            </div>
-
-            <div class="mt-3">
-                <label for="categoryUrl">Category URL</label>
-                <input type="text" id="categoryUrl" 
-                class="form-control" name="categoryUrl"  [(ngModel)]="category.urlHandle">
-            </div>
-
-            <div class="mt-3">
-                <button type="submit" class="btn btn-primary">Save</button>
-            </div>
-
-        </div>
-    </form>
     <ng-template #notFound>
         <div class="warning alert-warning" role="alert">
             Category Not Found
