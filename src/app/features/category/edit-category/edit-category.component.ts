@@ -66,6 +66,4 @@ export class EditCategoryComponent implements OnInit, OnDestroy{
     }
   }
 
-
-
 }
